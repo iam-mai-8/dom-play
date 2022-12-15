@@ -1,11 +1,12 @@
 
-function highlight(el) {
+function highlight(el){
+
     //el.style.backgroundColor='blue';
 
-    if(el.style.backgroundColor == 'black'){ //black turn to yellow
-        el.style.backgroundColor='yellow';
+    if(el.style.backgroundColor =='black'){ //black turn to yellow
+        el.style.backgroundColor='green';
     }else{//turn to black
-        el.style.backgroundColor='white';
+        el.style.backgroundColor='black';
     }
 }
   
@@ -13,33 +14,12 @@ function highlight(el) {
     alert("I'm clicked!")
   }
 
-  function highlightActor(actor){
-    let spans = document.querySelectorAll("#play span");
-    for(const mySpan of spans){
-
-        if(actor==mySpan.dataset.actor){ //black turn to yellow
-            mySpan.style.backgroundColor='yellow';
-        }else{//turn to black
-            mySpan.style.backgroundColor='white';
-        }
-
-    }
-    //alert(actor);
-  }
-
   let spans = document.querySelectorAll("#play span");
  
 console.log(spans);
 
 for(const mySpan of spans){
-    //mySpan.addEventListener("click", myAlert);
-    //alert(mySpan.dataset.actor);
-
-    mySpan.addEventListener("click",function(ev){
-     highlightActor(mySpan.dataset.actor);
-        
-
-    });
+    mySpan.addEventListener("click", myAlert);
 }
   
   
